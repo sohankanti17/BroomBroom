@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>BroomBroom - Bike rental | Coming soon</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="assets/images/logo_bb.png" type="image/x-icon">
+	<link rel="preload" as="image" href="assets/images/bg1.jpg">
+	<link rel="preload" as="image" href="assets/images/bg2.jpg">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style type="text/css">
+		html{
+			scroll-behavior: smooth;
+		}
+
+		body{
+			background-color: #000;
+			background-image: linear-gradient(rgba(0,0,0.4), rgba(0,0,0,0.3)), url("assets/images/bg1.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+		}
+
+		body::-webkit-scrollbar{
+			display: none;
+		}
+
+		#main-logo{
+			width: 280px;
+		}
+
+		#coming-soon, h4, h4+p, footer>p{
+			font-family: sans-serif;
+		}
+
+		#btn-bottom{
+			position: absolute;
+			bottom: 50px;
+			animation: updown 1s infinite ease-in-out;
+		}
+
+		@keyframes updown{
+			0%{
+				bottom: 50px;
+			}
+
+			50%{
+				bottom: 40px;
+			}
+
+			100%{
+				bottom: 50px;	
+			}
+		}
+
+		@media screen and (max-width: 520px){
+			body{
+				background-image: linear-gradient(rgba(0,0,0.4), rgba(0,0,0,0.3)), url("assets/images/bg2.jpg");
+			}
+			nav{
+				background-color: #000;
+			}
+
+			#main-logo{
+				width: 200px;
+			}
+
+			#coming-soon{
+				font-size: 3rem;
+			}
+
+			#about-us{
+				position: relative;
+				z-index: 99999;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<nav class="navbar fixed-top">
+		<a class="navbar-brand" data-aos="fade-right" data-aos-delay="400" href=""><img src="assets/images/logo_full.png" alt="BroomBroom logo" id="main-logo"></a>
+	</nav>
+
+	<div class="container-fluid p-0 d-flex justify-content-center align-items-center flex-column" style="height: 100vh">
+		<p class="text-white display-3 text-center" id="coming-soon" data-aos="zoom-in">We're coming soon !</p>
+		<a id="btn-bottom" class="btn btn-warning rounded-circle" data-aos="fade-up" data-aos-offset="0" data-aos-delay="800" href="#footer">
+			<i class="fa fa-angle-down fa-lg"></i>
+		</a>
+	</div>
+
+	<div class="container-fluid bg-light py-4" id="about-us">
+		<div class="container pt-2">
+			<h4 class="text-center font-weight-bold" data-aos="zoom-out">Who we are</h4>
+			<p data-aos="zoom-out" data-aos-delay="400" class="text-justify text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div class="container pb-2 text-center mt-4">
+			<h4 class="font-weight-bold text-nowrap" data-aos="zoom-out">Want to be partner with us?</h4>
+			<p class="m-0">
+				<button class="btn btn-outline-warning m-2 font-weight-bold" data-aos="fade-right" data-aos-delay="400" data-aos-offset="0"><i class="fa fa-envelope mr-2"></i>broombroom.bike@gmail.com</button>
+				<button class="btn btn-outline-warning m-2 font-weight-bold" data-aos="fade-left" data-aos-delay="400" data-aos-offset="0"><i class="fa fa-phone mr-2"></i>+91 - 9015545517</button>
+			</p>
+		</div>
+	</div>
+
+	<footer class="container-fluid py-3 text-white text-center" style="background-color: #000" id="footer">
+			<p style="font-size: 14px" class="p-0 m-0">&copy; Copyright 2019 BroomBroom | All rights reserved</p>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
