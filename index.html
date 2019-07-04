@@ -6,8 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="shortcut icon" href="assets/images/logo_bb.png" type="image/x-icon">
 	<link rel="preload" as="image" href="assets/images/logo_full.png">
-	<link rel="preload" as="image" href="assets/images/bg1.jpg">
-	<link rel="preload" as="image" href="assets/images/bg2.jpg">
+	<link rel="preload" as="image" href="assets/images/assets/images/bg2.jpg">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -15,15 +14,7 @@
 	<style type="text/css">
 		html{
 			scroll-behavior: smooth;
-		}
-
-		body{
-			background-color: #000;
-			background-image: linear-gradient(rgba(0,0,0.4), rgba(0,0,0,0.3)), url("assets/images/bg1.jpg");
-/* 			background-size: cover; */
-			background-repeat: no-repeat;
-			background-position: center;
-			background-attachment: fixed;
+			overflow-x: hidden;
 		}
 
 		body::-webkit-scrollbar{
@@ -32,6 +23,15 @@
 
 		#main-logo{
 			width: 280px;
+		}
+
+		#main{
+			height: 100vh;
+			background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.7)), url("assets/images/bg2.jpg");
+			background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+  		background-attachment: fixed;
 		}
 
 		#coming-soon, h4, h4+p, footer>p{
@@ -59,20 +59,20 @@
 		}
 
 		@media screen and (max-width: 520px){
-			body{
-				background-image: linear-gradient(rgba(0,0,0.4), rgba(0,0,0,0.3)), url("assets/images/bg2.jpg");
-				background-position: center center;
-			}
 			nav{
 				background-color: #000;
 			}
 
 			#main-logo{
-				width: 250px;
+				width: 200px;
+			}
+
+			#main{
+				background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("assets/images/bg2.jpg");
 			}
 
 			#coming-soon{
-				font-size: 2.8rem;
+				font-size: 3rem;
 			}
 
 			#about-us{
@@ -88,9 +88,9 @@
 		<a class="navbar-brand" data-aos="fade-right" data-aos-delay="400" href=""><img src="assets/images/logo_full.png" alt="BroomBroom logo" id="main-logo"></a>
 	</nav>
 
-	<div class="container-fluid p-0 d-flex justify-content-center align-items-center flex-column" style="height: 100vh">
+	<div class="container-fluid p-0 d-flex justify-content-center align-items-center flex-column" id="main">
 		<p class="text-white display-3 text-center" id="coming-soon" data-aos="zoom-in">We're coming soon !</p>
-		<a id="btn-bottom" class="btn btn-warning rounded-circle" data-aos="fade-up" data-aos-offset="0" data-aos-delay="800" href="#footer">
+		<a id="btn-bottom" class="btn btn-warning rounded-circle" data-aos="fade-up" data-aos-offset="0" data-aos-delay="800" href="#btm">
 			<i class="fa fa-angle-down fa-lg"></i>
 		</a>
 	</div>
@@ -103,7 +103,7 @@
 				Do you like Mountains?<br>
 				Do you like riding in mountains?<br>
 				If your answer is yes then there is a great news for you.<br>
-				<span class="font-weight-bold">Broom Broom rental bike</span> chain service is coming soon in your area at affordable price with wide range of choices.
+				<span class="font-weight-bold">Broom Broom rental bike</span> chain service is coming soon in your area at affordable prices with wide range of choices.
 			</p>
 		</div>
 		<div class="container pb-2 text-center mt-4 pt-4">
@@ -115,7 +115,7 @@
 		</div>
 	</div>
 
-	<footer class="container-fluid py-3 text-white text-center" style="background-color: #000" id="footer">
+	<footer class="container-fluid py-3 text-white text-center" style="background-color: #000" id="btm">
 			<p style="font-size: 14px" class="p-0 m-0">&copy; Copyright 2019 Broom Broom | All rights reserved</p>
 	</footer>
 
@@ -125,20 +125,6 @@
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
   	AOS.init();
-  	var elem = document.documentElement;
-
-		/* View in fullscreen */
-		function openFullscreen() {
-		  if (elem.requestFullscreen) {
-		    elem.requestFullscreen();
-		  } else if (elem.mozRequestFullScreen) { /* Firefox */
-		    elem.mozRequestFullScreen();
-		  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-		    elem.webkitRequestFullscreen();
-		  } else if (elem.msRequestFullscreen) { /* IE/Edge */
-		    elem.msRequestFullscreen();
-		  }
-		}
 	</script>
 </body>
 </html>
