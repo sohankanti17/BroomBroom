@@ -82,7 +82,7 @@
 
 	</style>
 </head>
-<body>
+<body onload="openFullscreen()">
 	<nav class="navbar fixed-top">
 		<a class="navbar-brand" data-aos="fade-right" data-aos-delay="400" href=""><img src="assets/images/logo_full.png" alt="BroomBroom logo" id="main-logo"></a>
 	</nav>
@@ -122,6 +122,22 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+  	AOS.init();
+  	var elem = document.documentElement;
+
+		/* View in fullscreen */
+		function openFullscreen() {
+		  if (elem.requestFullscreen) {
+		    elem.requestFullscreen();
+		  } else if (elem.mozRequestFullScreen) { /* Firefox */
+		    elem.mozRequestFullScreen();
+		  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+		    elem.webkitRequestFullscreen();
+		  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+		    elem.msRequestFullscreen();
+		  }
+		}
+	</script>
 </body>
 </html>
